@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christie Valérie AKAMBA | Chorégraphe Contemporaine</title>
+  
+  <!-- Polices Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Manrope:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Style Embarqué -->
+  <style>
+    /* Animation texte */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    /* Effet de texture */
+    .grain-overlay {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.1"/></svg>');
+    }
+    
+    /* Effet de lumière */
+    .light-effect::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 70% 30%, rgba(212,175,55,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-[#0A0A0A] text-[#F5F0E6]">
+  <!-- Navbar (version précédente) -->
+  
+  <!-- Hero Section -->
+  <section class="relative h-screen min-h-[800px] flex items-center overflow-hidden grain-overlay light-effect">
+    <!-- Fond artistique -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/assets/images/hero/akamba-dynamic-pose.webp" 
+        alt="Christie Valérie AKAMBA dans un mouvement de danse contemporaine"
+        class="w-full h-full object-cover object-center opacity-95"
+        loading="eager"
+        id="hero-image"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-[#0A0A0A]/95"></div>
+    </div>
+
+    <!-- Contenu -->
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-3xl">
+        <!-- En-tête discret -->
+        <div class="mb-16 overflow-hidden">
+          <div class="animate-fadeIn">
+            <p class="font-mono text-[#D4AF37] text-sm tracking-[0.5em]">
+              ART CHORÉGRAPHIQUE ENGAGÉ
+            </p>
+          </div>
+        </div>
+
+        <!-- Titre principal -->
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-[0.9] mb-8">
+          <span class="block text-[#F5F0E6]">Christie</span>
+          <span class="block text-[#D4AF37] italic pl-[8%]">Valérie AKAMBA</span>
+        </h1>
+
+        <!-- Citation signature -->
+        <div class="mb-16 max-w-md pl-[8%] border-l border-[#D4AF37]/30">
+          <div class="animate-fadeIn [animation-delay:0.4s]">
+            <p class="font-sans text-lg leading-relaxed">
+              "Je transcende la danse pour révéler<br> 
+              les mémoires enfouies dans nos terres<br>
+              et nos corps en mouvement"
+            </p>
+          </div>
+        </div>
+
+        <!-- Bouton CTA -->
+        <div class="pl-[8%]">
+          <div class="animate-fadeIn [animation-delay:0.8s]">
+            <a href="#creations" class="group inline-flex items-center">
+              <span class="font-mono text-[#D4AF37] text-sm tracking-widest mr-4 group-hover:mr-6 transition-all duration-500">
+                DÉCOUVRIR LES CRÉATIONS
+              </span>
+              <svg class="w-5 h-5 text-[#D4AF37] animate-float" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicateur scroll -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+      <div class="h-10 w-5 border border-[#D4AF37] rounded-full flex justify-center">
+        <div class="w-px h-3 bg-[#D4AF37] mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Parallaxe douce
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroImg = document.getElementById('hero-image');
+      
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY * 0.3;
+        heroImg.style.transform = `translateY(${scrollY}px) scale(1.05)`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Animation des liens */
+footer a {
+    transition: color 0.3s ease;
+  }
+  
+  /* Style des champs de formulaire */
+  footer input:focus {
+    outline: 1px solid #d4af37;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    footer .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    footer .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
