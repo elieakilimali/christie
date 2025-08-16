@@ -27,3 +27,25 @@ footer a {
     }
   }
   
+
+
+  @keyframes texture-move {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+  
+  .animate-texture-move {
+    animation: texture-move 60s linear infinite alternate;
+  }
+  
+  .text-gold-400 {
+    color: #d4af37;
+  }
+  
+  .bg-gold-400 {
+    background-color: #d4af37;
+  }
+  
+  .border-gold-400 {
+    border-color: #d4af37;
+  }
